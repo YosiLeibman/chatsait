@@ -71,6 +71,18 @@ app.post('/register', (req, res) => {
 	}
 })
 
+app.post('/login', (req, res) => {
+	if (req.body.f_name && req.body.l_name) {
+		connection.query(
+			`SELECT id FROM teachers WHERE f_name = "${req.body.f_name}"`,
+			(error, results) => {
+				if (error) throw error
+				res.json(results)
+			}
+		)
+	}
+})
+
 app.post('/new-student', (req, res) => {
 	if (req.body.f_name && req.body.l_name) {
 		connection.query(
