@@ -1,9 +1,11 @@
 const express = require('express')
 const mysql = require('mysql')
 const uuid = require('uuid')
+const cors = require('cors')
 
 const app = express()
 
+app.use(cors())
 app.use(express.json())
 
 const connection = mysql.createConnection({
@@ -16,6 +18,13 @@ const connection = mysql.createConnection({
 connection.connect(err => {
 	if (err) throw err
 	console.log('connected to mySql DB')
+})
+
+app.get('/students', (req, res) => {
+	connection.query(`select * FROM students`, (error, results, fields) => {
+		if (error) throw error
+		res.json(results)
+	})
 })
 
 app.get('/all', (req, res) => {

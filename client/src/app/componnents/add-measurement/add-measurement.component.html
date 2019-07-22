@@ -1,0 +1,19 @@
+<div class="bg">
+  <mat-form-field>
+    <mat-label>select student:</mat-label>
+    <mat-select #sel (selectionChange)="changeHandller(sel.value)">
+      <mat-option *ngFor="let s of localstudentsArr" [value]="s.id">
+        {{ s.f_name }} {{ s.l_name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-slider #length min="-20" max="20" step="1" value="0"></mat-slider>
+  <h2>{{ length.value }}</h2>
+  <button
+    mat-raised-button
+    color="accent"
+    (click)="submitHandlle(sel.value, length.value)"
+  >
+    submit
+  </button>
+</div>

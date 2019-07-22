@@ -1,0 +1,7 @@
+.bg {
+  background-image: url('/assets/password.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height: 86%;
+}

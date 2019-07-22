@@ -1,0 +1,23 @@
+mat-slider {
+  display: block;
+  margin: 7px;
+  margin-bottom: 4px;
+}
+
+mat-form-field {
+  margin: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.bg {
+  background-image: url('/assets/add.svg');
+  background-size: cover;
+  height: 87%;
+}
+
+button {
+  margin: 8px;
+}

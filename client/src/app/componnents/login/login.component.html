@@ -1,0 +1,13 @@
+<div class="bg">
+  <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="first name" formControlName="f_name" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="last name" formControlName="l_name" />
+    </mat-form-field>
+    <input type="submit" value="submit" />
+  </form>
+
+  <p>{{ loginForm.value | json }}</p>
+</div>

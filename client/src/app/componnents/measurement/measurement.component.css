@@ -1,0 +1,21 @@
+mat-card {
+  display: inline-block;
+  margin: 7px;
+}
+
+mat-form-field {
+  display: block;
+  width: 35%;
+  margin: 20px;
+}
+
+.bg {
+  background-image: url('/assets/not_found_404.svg');
+  background-size: contain;
+  background-position: center bottom;
+  height: 86%;
+}
+
+h1 {
+  text-align: center;
+}

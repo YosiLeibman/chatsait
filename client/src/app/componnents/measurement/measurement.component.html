@@ -1,0 +1,22 @@
+<div class="bg">
+  <mat-form-field>
+    <mat-label>select student:</mat-label>
+    <mat-select #sel (selectionChange)="changeHandller(sel)">
+      <mat-option *ngFor="let s of localstudentsArr" [value]="s.id">
+        {{ s.f_name }} {{ s.l_name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-card *ngFor="let m of localMesurementsArr">
+    <mat-card-title>{{ m.f_name }} {{ m.l_name }}</mat-card-title>
+    <mat-card-subtitle
+      >teacer: {{ m.teacher_f }} {{ m.teacher_l }}</mat-card-subtitle
+    >
+    <mat-card-content>length: {{ m.length }}</mat-card-content>
+  </mat-card>
+
+  <h1 *ngIf="localMesurementsArr && !localMesurementsArr[0]">
+    there's no measurements for {{ sel.triggerValue }}
+  </h1>
+</div>

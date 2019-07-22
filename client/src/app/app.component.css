@@ -1,0 +1,21 @@
+mat-toolbar {
+  font-weight: 900;
+  letter-spacing: 0.7px;
+  font-size: 24pt;
+  padding: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+button {
+  margin-left: 3px;
+}
+
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
