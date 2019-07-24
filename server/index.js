@@ -1,6 +1,5 @@
 const express = require('express')
 const mysql = require('mysql')
-const uuid = require('uuid')
 const cors = require('cors')
 
 const app = express()
